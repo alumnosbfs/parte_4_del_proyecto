@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adivina la palabra</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vYruJp6eS6HjwRb3jckRxI8uTmMSaylsj04-ta7V0qK34H7Vh3-COq59AMtYqMfP_IB7LNqnzhLWmd-yG5eSG3QNcf8Z1XUs1CWwS-bKVRqsqzVRoin2-rGtL7JGhwOGilXetgon3m5VDtpitIL5G7kuWWLkM4aO_kEwECi4pVxi6_6E6yQ3_1WkYmL-C32QAh79sdZgpJVSgqoWNafGzapAFh2M7rFWGU0lh0jQyuZzqdqgZY1eLuiOiqme2tH3WlP7tBMLfQ6DE_ShW6YsauAnHu1Eny68yD-Wv_PDPCQjIX8xuxeHEwRv0rPqz5c0medkjmiY_A52l_gLymS-tJO83mMMGwbqrCQTRKyFAHb5yRHKOUVQpl8JcS-cPRpl4K0C-ncp_iMfkV6VffZ5Wl6b4iF0ILfAo-ElwWhEOtpeGiieL1h0gmzw69pYixglBMgPAAV4qyXkPgXOC2RPNuk5_COSTiulNMo-Gw2Z_-sHlmp4vJEw93-83NOnZxkRSMTMfR4EzDUWBlqCf0VRR_Lh4L09T304W0W8GS9BNgeDnQdkY4os9JT8tFmQ5-W2QiESyNlNaRglzI0UWs1zS30KqF8rrgqYJPqmveLWWaAGEt55GDo_vP8iwkk9kvqSnnp-xGfFHH9wLKh_OD_fDXIawDwXSmK7KWqFWYWzaEBkcP7VIaIGCGFRWV6EVNGWw9BpnVc2HkEzHL5VoKyFalzMC7fKFCWP6xoCmrMxnupb3La0_9folCe1Q3TA-3zzk8SXCNKQnZrk51raw0CfmpjzAfbV7lFKWiiV00BcBAPeUyd-x2rQhudc8Wp_uqrbX5DoFyghNZt2mvIg9T31mBZscyzmTDCMyr3DWCsFislZgbxpX3azKiwC-3hDu62fK64MOlGQuNG8i3STgAkb0pO7DiV-6NGjakpITc2V5lpr6VdF9bOEXNCHfy_KRduGBSKOdDb6ae0ATC-DA6otUJUemRfOgkq6CWuuUanuLo2rF3v2twpxeXIqbBG4oPbvmmlERWCl80Af2VKDbKcKuNTkrkAY30L6xZpRWME34F8MZAEldaqDO1EguX90fBPtBekpomYeIKXD7868sn4Xj6AwCIwW7c-ItQxAsknicd61Gw3DYRxysSSDvynss1y3mHngnWU6zvkR6c_yiGn5deD2mayVqHcXGE7SFqXp7wn7U1ccwEpcgVDkrfM8s47b0Rdbz51GtYa4Q7DIm0xEcDpwxLkpPcVtMllitnsCgYQouQ-jNcZeQuVqh1EQBiw61RZgzroqHPG1qGhI1ploSnYeJiigns_ie6euHVoe24uMZNTkNl4Ubuhf4Xc_mVemSNM4b7zxgd6Lt1nEyP6d6hRd7WCW1eQrscfiyETx5HY543gfnkOSei6MeKuEkrPuExvikYtFIp_5u5MWLUri45KUASLoRqdzUaEiIjNuhkBAIxYUd2DOuJ3pa-9xqe5HKn5pc34LSpt6kYtleW40WRIrc4_y-jSYXwHeMjPNaLSnBvWaprCUNnKBrseUEUdatLtcrzALVXX9wDc9uYCj3LHQHCRVQvPkDDNilnbZcnxGzhLSz0b4YBEx8M8H0_qCcnmS56VmLUDCmQ1yjB80QPAwcJOMyh3pMtA9plNAaeAn66lbPZf8gw_uXE4pJQWHDSoTcm8yhYybCPYK1nwSizjwgNMoij9zBi3r0E1jhP2sj-jzVananCdDrjQCDdBIr6SeWxn_uLQx8z-4cLJk9MjIehrG0KrI4Pvm_PRMObE" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+<h4 id="player_1_name"></h4> <span id="player_1_score"></span>
+<h4 id="player_2_name"></h4> <span id="player_2_score"></span>
+<div class="container">
+	<center>
+		<h2 style="color: white;">Adivina la palabra</h2>
+		<h3 id="player_question"></h3>
+		<h3 id="player_answer"></h3>
+		<div id="output" class="col-lg-6"></div>
+
+		<br>
+		<br>
+
+		<label>Escribe tu palabra: <b style="color: red">Escribe una palabra con 5 o más letras</b></label>
+		<input type="text" id="palabra" class="form-control" placeholder="Palabra">
+		<button onclick="send()" class="btn btn-success" style="width:30%;">Enviar</button>
+
+		<br>
+
+	</center>
+</div>
+
+<script src="game_page.js"></script>
+</body>
+</html>
